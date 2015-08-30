@@ -1,0 +1,113 @@
+@import 'colors.less';
+
+@backgroundColor: @color-primary-3;
+@accentColor: @color-primary-1;
+@textColor: @color-secondary-2-1;
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:600|Josefin+Sans);
+
+body {
+	margin: 0;
+	
+	background-color: @backgroundColor;
+	color: @textColor;
+
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (min-device-width: 780px) {
+	.all {
+		display: flex;
+		justify-content: center;
+	}
+
+	.informational-container {
+		flex: 0 0 316px;
+		border-right: 1px solid @accentColor;
+	}
+
+	.contents {
+		flex: 1 1 455px;
+		margin-left: 20px;
+	}
+}
+
+@media (max-device-width: 780px) {
+	.all {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.informational-container {
+		flex: 0 0 300px;
+	}
+	
+	.informational {
+		z-index: 100;
+		background-color: @backgroundColor;
+		width: 100%;
+		box-sizing: border-box;
+		border-bottom: 1px solid @accentColor;
+	}
+
+	.contents {
+		flex: 1 1 auto;
+	}
+	
+	.portrait {
+		float: right;
+	}
+}
+
+.all {
+	position: relative;
+}
+
+.informational-container {
+	position: relative;
+}
+
+.informational {
+	position: fixed;
+	padding: 10px;
+}
+
+
+.title {
+	border-bottom: 1px solid @accentColor;
+	display: inline-block;
+
+	font-family: 'Josefin Slab', serif;
+	
+	h1 {
+		margin: 10px 0;
+	}
+	
+	h3 {
+		display: inline-block;
+		margin: 0;
+		padding:10px;
+		border-left: 1px solid @accentColor;
+		&:first-of-type {
+			border-left: none;
+			padding-left: 0;
+		}
+	}
+}
+
+a {
+	color: @color-secondary-1-2;
+	&:visited {
+		color: @color-primary-1;
+	}
+}
+
+.footer {
+	margin: 0;
+	padding: 10px;
+	border-top: 1px solid @accentColor;
+	font-size: smaller;
+	p {
+		margin: 0;
+	}
+}

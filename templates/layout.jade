@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title= locals.title
+		link(rel='stylesheet' href='/css/main.css')
+	body
+		div.all
+			div.informational-container
+				div.informational
+					div.portrait
+						img.headshot(src='images/katy-300x305.jpg')
+					div.title
+						!= contents.meta['title.md'].html
+					div.contact
+						!= contents.meta['contact.md'].html
+			div.contents
+				div.navigation
+					
+				div.content
+					block content
+		div.footer
+			!= contents.meta['footer.md'].html

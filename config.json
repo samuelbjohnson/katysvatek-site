@@ -1,0 +1,8 @@
+{
+  "locals": {
+    "title": "Kathryn Svatek"
+  },
+  "plugins": [
+    "wintersmith-less"
+  ]
+}

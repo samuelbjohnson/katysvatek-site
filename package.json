@@ -1,0 +1,9 @@
+{
+  "name": "second",
+  "version": "0.0.1",
+  "dependencies": {
+    "wintersmith": "^2.2.1",
+    "wintersmith-less": "^0.2.3",
+    "wintersmith-node-sass": "^0.2.1"
+  }
+}
